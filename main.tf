@@ -9,10 +9,16 @@ terraform {
     }
   }
 }
-
+variable "Hub_Access_key" {}
+variable "Hub_Secret_key" {}
+variable "Hub_region" {}
 
 provider "pgp" {}
-provider "aws" {}
+provider "aws" {
+access_key = var.Hub_Access_key
+secret_key = var.Hub_Secret_key
+region = var.Hub_region
+}
 
 resource "pgp_key" "example" {
   name    = "John Doe"
