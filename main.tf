@@ -4,6 +4,9 @@ terraform {
       source = "ekristen/pgp"
       version = "0.2.4"
     }
+    aws = {
+      version = "5.30.0"
+    }
   }
 }
 
