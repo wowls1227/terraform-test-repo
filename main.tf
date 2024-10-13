@@ -8,6 +8,15 @@ terraform {
 }
 
 
-provider "pgp" { 
-  # Configuration options 
+provider "pgp" {}
+provider "aws" {}
+
+resource "pgp_key" "example" {
+  name    = "John Doe"
+  email   = "jdoe@exammple.com"
+  comment = "Generated PGP Key"
+}
+
+resource "aws_vpc" "main" {
+  cidr_block = "10.150.0.0/16"
 }
