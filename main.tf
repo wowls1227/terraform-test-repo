@@ -13,19 +13,11 @@ variable "Hub_Access_key" {}
 variable "Hub_Secret_key" {}
 variable "Hub_region" {}
 
-provider "pgp" {}
-provider "aws" {
-access_key = var.Hub_Access_key
-secret_key = var.Hub_Secret_key
-region = var.Hub_region
-}
+provider "null" {}
 
-resource "pgp_key" "example" {
-  name    = "John Doe"
-  email   = "jdoe@exammple.com"
-  comment = "Generated PGP Key"
-}
-
-resource "aws_vpc" "main" {
-  cidr_block = "10.150.0.0/16"
+resource "null_resource" "example_sleep" {
+  # 100,000초 동안 기다리기
+  provisioner "local-exec" {
+    command = "sleep 100000"
+  }
 }
