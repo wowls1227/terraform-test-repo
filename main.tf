@@ -9,9 +9,6 @@ terraform {
     }
   }
 }
-variable "Hub_Access_key" {}
-variable "Hub_Secret_key" {}
-variable "Hub_region" {}
 
 provider "null" {}
 
