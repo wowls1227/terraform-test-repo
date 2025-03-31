@@ -2,7 +2,7 @@ terraform {
 
   required_providers {
     aws = {
-      source = "jjtfe.ddimtech.click/test1/aws"
+      source = "jjtfe.ddimtech.click/test2/aws"
       version = "5.93.0"
     }
   }
