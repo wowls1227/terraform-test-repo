@@ -11,3 +11,7 @@ terraform {
 provider "aws" {
   # Configuration options
 }
+
+module "example" {
+  source  = ""
+}
