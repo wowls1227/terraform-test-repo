@@ -13,5 +13,5 @@ provider "aws" {
 }
 
 module "example" {
-  source  = "git@github.com:kjjprivate/terraform-module-upload-private-provider.git"
+  source  = "https://github.com/kjjprivate/terraform-module-upload-private-provider.git"
 }
